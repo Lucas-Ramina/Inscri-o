@@ -1,0 +1,18 @@
+CREATE DATABASE treinamento;
+
+CREATE TABLE funcionario(
+id INT PRIMARY KEY AUTO_INCREMENT,
+ra VARCHAR(50),
+nome VARCHAR(50),
+idade INT,
+nacionalidade VARCHAR(50),
+sexo VARCHAR(15),
+endereco VARCHAR(150),
+telefone VARCHAR(15)
+);
+
+CREATE TABLE curso(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+id_funcionario INT REFERENCES funcionario(id)
+);
